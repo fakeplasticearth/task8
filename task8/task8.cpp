@@ -205,7 +205,8 @@ int main()
     int n;
     cin >> n;
     bool first = 1;
-    polynomial* ptr = &lukas_p(n);
+    polynomial tmp = lukas_p(n);
+    polynomial* ptr = &tmp;
     while (ptr != NULL) {
         if (first) {
             if ((*ptr).curr.coef != 1)
